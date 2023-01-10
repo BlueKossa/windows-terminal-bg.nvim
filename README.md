@@ -4,17 +4,18 @@ Neovim plugin to change the background of the windows terminal background, from 
 
 ## Setup
 
-Install using packer.nvim
+### Install using packer.nvim
 ```lua
 require("Bluekossa/windows-terminal-bg.nvim")
 ```
 
+### Options
 For setting this up, you can pass in 3 arguments
 - terminal_conf: path to your windows terminal settings.json
 - bg_path: path to your background images that you want to pick from
 - windows_bg_path (optional): windows path to your background images, this should get automatically parsed from bg_path
 
-Example:
+### Example:
 ```lua
 wtbg = require("wt-bg")
 
