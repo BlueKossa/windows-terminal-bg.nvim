@@ -2,6 +2,12 @@ local WtBg = {}
 
 
 function WtBg:setup(opts)
+    -- Try to automatically create a windows path if none is provided
+    if opts.windows_bg_path == nil then
+        local windows_bg_path = string.gsub(opts.bg_path, "/mnt/", "")
+        windows_bg_path = string.sub(windows_bg_path, 1, 1):upper() .. ":" .. string.sub(windows_bg_path, 2)
+        opts.windows_bg_path = windows_bg_path
+    end
     local options = opts or {}
     self.options = options
 end
